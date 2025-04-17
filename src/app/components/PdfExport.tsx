@@ -45,7 +45,7 @@ export default function PdfExport({
       const plainText = htmlToPlainText(comment.text);
       const commentText = `${idx + 1}. ${plainText}`;
       const lines = pdf.splitTextToSize(commentText, maxLineWidth);
-      lines.forEach((line) => {
+      lines.forEach((line: any) => {
         if (y > 270) {
           pdf.addPage();
           y = 20;
